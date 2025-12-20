@@ -41,14 +41,14 @@ export default function CalendarManager() {
         <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm max-w-4xl">
             <div className="flex items-center justify-between mb-8">
                 <div>
-                    <h2 className="text-xl font-bold text-deep-slate-blue">Manage Availability</h2>
+                    <h2 className="text-xl font-bold text-black">Manage Availability</h2>
                     <p className="text-slate-500 text-sm">Click dates to mark them as unavailable.</p>
                 </div>
 
                 {hasChanges && (
                     <button
                         onClick={handleSave}
-                        className="bg-deep-slate-blue text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 shadow-lg shadow-deep-slate-blue/20 animate-pulse"
+                        className="bg-black text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 shadow-lg shadow-black/20 animate-pulse"
                     >
                         <Save className="h-4 w-4" />
                         Save Changes

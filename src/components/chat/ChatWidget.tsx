@@ -120,7 +120,7 @@ export default function ChatWidget({ userId, initialDriverId, initialDriverName 
             {/* Floating Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-6 right-6 z-50 bg-electric-teal hover:bg-teal-600 text-white rounded-full p-4 shadow-2xl transition-all hover:scale-110"
+                className="fixed bottom-6 right-6 z-50 bg-black hover:bg-gray-800 text-white rounded-full p-4 shadow-2xl transition-all hover:scale-110"
                 aria-label="Open chat"
             >
                 {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
@@ -130,7 +130,7 @@ export default function ChatWidget({ userId, initialDriverId, initialDriverName 
             {isOpen && (
                 <div className="fixed bottom-24 right-6 z-50 w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
                     {/* Header */}
-                    <div className="bg-deep-slate-blue text-white p-4 flex items-center justify-between">
+                    <div className="bg-black text-white p-4 flex items-center justify-between">
                         {view === 'chat' && (
                             <button
                                 onClick={handleBackToList}
@@ -165,7 +165,7 @@ export default function ChatWidget({ userId, initialDriverId, initialDriverName 
                                         className="p-4 border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors"
                                     >
                                         <div className="flex items-start gap-3">
-                                            <div className="w-12 h-12 bg-electric-teal rounded-full flex items-center justify-center text-white font-bold">
+                                            <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold">
                                                 {convo.driverName.charAt(0)}
                                             </div>
                                             <div className="flex-1 min-w-0">
@@ -177,7 +177,7 @@ export default function ChatWidget({ userId, initialDriverId, initialDriverName 
                                                 </div>
                                                 <p className="text-sm text-slate-600 truncate">{convo.lastMessage}</p>
                                                 {convo.unread > 0 && (
-                                                    <span className="inline-block mt-1 bg-electric-teal text-white text-xs px-2 py-0.5 rounded-full">
+                                                    <span className="inline-block mt-1 bg-black text-white text-xs px-2 py-0.5 rounded-full">
                                                         {convo.unread}
                                                     </span>
                                                 )}
@@ -203,7 +203,7 @@ export default function ChatWidget({ userId, initialDriverId, initialDriverName 
                                         >
                                             <div
                                                 className={`max-w-[70%] rounded-2xl px-4 py-2 ${msg.sent
-                                                        ? 'bg-electric-teal text-white rounded-br-none'
+                                                        ? 'bg-black text-white rounded-br-none'
                                                         : 'bg-white text-slate-800 rounded-bl-none border border-slate-200'
                                                     }`}
                                             >
@@ -227,12 +227,12 @@ export default function ChatWidget({ userId, initialDriverId, initialDriverName 
                                         onChange={(e) => setMessageInput(e.target.value)}
                                         onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                                         placeholder="Type a message..."
-                                        className="flex-1 px-4 py-2 border border-slate-200 rounded-full focus:outline-none focus:ring-2 focus:ring-electric-teal focus:border-transparent"
+                                        className="flex-1 px-4 py-2 border border-slate-200 rounded-full focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                                     />
                                     <button
                                         onClick={handleSendMessage}
                                         disabled={!messageInput.trim()}
-                                        className="bg-electric-teal hover:bg-teal-600 text-white p-2 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="bg-black hover:bg-gray-800 text-white p-2 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         <Send className="h-5 w-5" />
                                     </button>

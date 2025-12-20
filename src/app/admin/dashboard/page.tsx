@@ -6,7 +6,7 @@ export default function AdminDashboardPage() {
     return (
         <AdminLayout>
             <div className="mb-8">
-                <h1 className="text-3xl font-bold text-deep-slate-blue">Admin Dashboard</h1>
+                <h1 className="text-3xl font-bold text-black">Admin Dashboard</h1>
                 <p className="text-slate-500">Overview of platform activity.</p>
             </div>
 
@@ -18,7 +18,7 @@ export default function AdminDashboardPage() {
                     </div>
                     <div>
                         <p className="text-slate-500 text-sm font-medium">Total Users</p>
-                        <p className="text-2xl font-bold text-deep-slate-blue">1,240</p>
+                        <p className="text-2xl font-bold text-black">1,240</p>
                     </div>
                 </div>
                 <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
@@ -27,7 +27,7 @@ export default function AdminDashboardPage() {
                     </div>
                     <div>
                         <p className="text-slate-500 text-sm font-medium">Active Drivers</p>
-                        <p className="text-2xl font-bold text-deep-slate-blue">85</p>
+                        <p className="text-2xl font-bold text-black">85</p>
                     </div>
                 </div>
                 <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
@@ -36,7 +36,7 @@ export default function AdminDashboardPage() {
                     </div>
                     <div>
                         <p className="text-slate-500 text-sm font-medium">Pending Approvals</p>
-                        <p className="text-2xl font-bold text-deep-slate-blue">2</p>
+                        <p className="text-2xl font-bold text-black">2</p>
                     </div>
                 </div>
             </div>

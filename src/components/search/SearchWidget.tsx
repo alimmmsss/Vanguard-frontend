@@ -111,7 +111,7 @@ export default function SearchWidget() {
                     <button
                         type="button"
                         onClick={handleSearch}
-                        className="w-full py-3 bg-black hover:bg-slate-800 text-white rounded-xl font-bold shadow-lg shadow-deep-slate-blue/30 transition-all flex items-center justify-center gap-2"
+                        className="w-full py-3 bg-black hover:bg-slate-800 text-white rounded-xl font-bold shadow-lg shadow-black/30 transition-all flex items-center justify-center gap-2"
                     >
                         <Search className="h-5 w-5" />
                         Search

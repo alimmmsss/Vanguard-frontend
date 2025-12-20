@@ -19,7 +19,7 @@ export default function DocumentViewer({ driver, onClose, onApprove, onReject }:
                 {/* Header */}
                 <div className="p-4 border-b border-slate-100 flex justify-between items-center">
                     <div>
-                        <h2 className="text-xl font-bold text-deep-slate-blue">{driver.name}</h2>
+                        <h2 className="text-xl font-bold text-black">{driver.name}</h2>
                         <p className="text-sm text-slate-500">Applied on {driver.appliedDate}</p>
                     </div>
                     <button onClick={onClose} className="p-2 hover:bg-slate-100 rounded-full transition-colors">
@@ -56,18 +56,18 @@ export default function DocumentViewer({ driver, onClose, onApprove, onReject }:
                     </div>
 
                     <div className="mt-8 bg-white p-6 rounded-xl border border-slate-100">
-                        <h3 className="font-bold text-deep-slate-blue mb-4">Verification Checklist</h3>
+                        <h3 className="font-bold text-black mb-4">Verification Checklist</h3>
                         <div className="space-y-3">
                             <label className="flex items-center gap-3 cursor-pointer">
-                                <input type="checkbox" className="w-5 h-5 rounded border-slate-300 text-electric-teal focus:ring-electric-teal" />
+                                <input type="checkbox" className="w-5 h-5 rounded border-slate-300 text-black focus:ring-black" />
                                 <span className="text-slate-700">NID name matches application name</span>
                             </label>
                             <label className="flex items-center gap-3 cursor-pointer">
-                                <input type="checkbox" className="w-5 h-5 rounded border-slate-300 text-electric-teal focus:ring-electric-teal" />
+                                <input type="checkbox" className="w-5 h-5 rounded border-slate-300 text-black focus:ring-black" />
                                 <span className="text-slate-700">Driving license is valid and not expired</span>
                             </label>
                             <label className="flex items-center gap-3 cursor-pointer">
-                                <input type="checkbox" className="w-5 h-5 rounded border-slate-300 text-electric-teal focus:ring-electric-teal" />
+                                <input type="checkbox" className="w-5 h-5 rounded border-slate-300 text-black focus:ring-black" />
                                 <span className="text-slate-700">Vehicle photo matches description</span>
                             </label>
                         </div>
@@ -85,7 +85,7 @@ export default function DocumentViewer({ driver, onClose, onApprove, onReject }:
                     </button>
                     <button
                         onClick={() => onApprove(driver.id)}
-                        className="px-6 py-3 bg-electric-teal hover:bg-teal-600 text-white font-bold rounded-xl flex items-center gap-2 shadow-lg shadow-electric-teal/20 transition-colors"
+                        className="px-6 py-3 bg-black hover:bg-gray-800 text-white font-bold rounded-xl flex items-center gap-2 shadow-lg shadow-black/20 transition-colors"
                     >
                         <Check className="h-5 w-5" />
                         Approve Driver

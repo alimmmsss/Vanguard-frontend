@@ -23,7 +23,7 @@ export default function ReviewRequestGenerator() {
 
     return (
         <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-deep-slate-blue mb-2">Request Reviews</h2>
+            <h2 className="text-xl font-bold text-black mb-2">Request Reviews</h2>
             <p className="text-slate-500 text-sm mb-6">
                 Generate a unique link to send to your passengers after a trip.
             </p>
@@ -31,7 +31,7 @@ export default function ReviewRequestGenerator() {
             {!generatedLink ? (
                 <button
                     onClick={generateLink}
-                    className="bg-electric-teal text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-teal-600 transition-colors shadow-lg shadow-electric-teal/20"
+                    className="bg-black text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-gray-800 transition-colors shadow-lg shadow-black/20"
                 >
                     <Share2 className="h-5 w-5" />
                     Generate Review Link
@@ -55,7 +55,7 @@ export default function ReviewRequestGenerator() {
                     </p>
                     <button
                         onClick={generateLink}
-                        className="text-electric-teal text-sm font-bold hover:underline w-full text-center"
+                        className="text-black text-sm font-bold hover:underline w-full text-center"
                     >
                         Generate New Link
                     </button>

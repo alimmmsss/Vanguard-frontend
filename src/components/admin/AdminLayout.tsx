@@ -25,9 +25,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     return (
         <div className="min-h-screen bg-slate-50 flex">
             {/* Sidebar */}
-            <aside className="w-64 bg-deep-slate-blue text-white hidden md:flex flex-col fixed h-full">
+            <aside className="w-64 bg-black text-white hidden md:flex flex-col fixed h-full">
                 <div className="p-6 flex items-center gap-3">
-                    <Shield className="h-8 w-8 text-electric-teal" />
+                    <Shield className="h-8 w-8 text-black" />
                     <div>
                         <h1 className="text-xl font-bold tracking-tight">Vanguard</h1>
                         <p className="text-xs text-slate-400">Admin Portal</p>
@@ -42,7 +42,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                                 key={item.href}
                                 href={item.href}
                                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${isActive
-                                        ? 'bg-electric-teal text-deep-slate-blue font-bold'
+                                        ? 'bg-black text-black font-bold'
                                         : 'text-slate-300 hover:bg-slate-800 hover:text-white'
                                     }`}
                             >

@@ -31,7 +31,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                             key={idx}
                             onClick={() => setActiveImage(img)}
                             className={`relative h-20 w-24 flex-shrink-0 overflow-hidden rounded-lg border-2 transition-all ${activeImage === img
-                                    ? 'border-electric-teal ring-2 ring-electric-teal/20'
+                                    ? 'border-black ring-2 ring-black/20'
                                     : 'border-transparent opacity-70 hover:opacity-100'
                                 }`}
                         >

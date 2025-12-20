@@ -34,7 +34,7 @@ export default function AvailabilityCalendar({ unavailableDates }: AvailabilityC
     return (
         <div className="bg-white rounded-xl border border-slate-100 p-6 shadow-sm">
             <div className="flex items-center justify-between mb-6">
-                <h3 className="font-bold text-deep-slate-blue text-lg">Availability</h3>
+                <h3 className="font-bold text-black text-lg">Availability</h3>
                 <div className="flex gap-2">
                     <button
                         onClick={prevMonth}

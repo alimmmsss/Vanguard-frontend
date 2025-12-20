@@ -49,7 +49,7 @@ export default function RegistrationWizard() {
 
         return (
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                <h2 className="text-xl font-bold text-deep-slate-blue mb-4">Personal Information</h2>
+                <h2 className="text-xl font-bold text-black mb-4">Personal Information</h2>
                 <div>
                     <label className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
                     <input {...register('fullName')} className="w-full px-4 py-2 border rounded-lg" placeholder="As per NID" />
@@ -66,7 +66,7 @@ export default function RegistrationWizard() {
                     {errors.address && <p className="text-red-500 text-xs mt-1">{errors.address.message}</p>}
                 </div>
                 <div className="flex justify-end pt-4">
-                    <button type="submit" className="bg-deep-slate-blue text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2">
+                    <button type="submit" className="bg-black text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2">
                         Next <ChevronRight className="h-4 w-4" />
                     </button>
                 </div>
@@ -88,7 +88,7 @@ export default function RegistrationWizard() {
 
         return (
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                <h2 className="text-xl font-bold text-deep-slate-blue mb-4">Vehicle Information</h2>
+                <h2 className="text-xl font-bold text-black mb-4">Vehicle Information</h2>
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label className="block text-sm font-medium text-slate-700 mb-1">Make</label>
@@ -117,7 +117,7 @@ export default function RegistrationWizard() {
                     <button type="button" onClick={() => setStep(1)} className="text-slate-500 font-medium flex items-center gap-2">
                         <ChevronLeft className="h-4 w-4" /> Back
                     </button>
-                    <button type="submit" className="bg-deep-slate-blue text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2">
+                    <button type="submit" className="bg-black text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2">
                         Next <ChevronRight className="h-4 w-4" />
                     </button>
                 </div>
@@ -148,7 +148,7 @@ export default function RegistrationWizard() {
 
         return (
             <div className="space-y-6">
-                <h2 className="text-xl font-bold text-deep-slate-blue mb-4">Document Verification</h2>
+                <h2 className="text-xl font-bold text-black mb-4">Document Verification</h2>
 
                 {['nid', 'license', 'car'].map((field) => (
                     <div key={field} className="border border-dashed border-slate-300 rounded-xl p-6 text-center hover:bg-slate-50 transition-colors">
@@ -172,7 +172,7 @@ export default function RegistrationWizard() {
                                 />
                                 <label
                                     htmlFor={`file-${field}`}
-                                    className="text-electric-teal text-sm font-bold cursor-pointer hover:underline"
+                                    className="text-black text-sm font-bold cursor-pointer hover:underline"
                                 >
                                     {isUploading ? 'Uploading...' : 'Choose File'}
                                 </label>
@@ -188,7 +188,7 @@ export default function RegistrationWizard() {
                     <button
                         onClick={handleFinish}
                         disabled={!isComplete}
-                        className="bg-electric-teal text-white px-8 py-2 rounded-lg font-bold flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-electric-teal/20"
+                        className="bg-black text-white px-8 py-2 rounded-lg font-bold flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-black/20"
                     >
                         Submit Application
                     </button>
@@ -205,7 +205,7 @@ export default function RegistrationWizard() {
                 {[1, 2, 3].map((s) => (
                     <div
                         key={s}
-                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${step >= s ? 'bg-deep-slate-blue text-white' : 'bg-slate-200 text-slate-500'
+                        className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${step >= s ? 'bg-black text-white' : 'bg-slate-200 text-slate-500'
                             }`}
                     >
                         {s}

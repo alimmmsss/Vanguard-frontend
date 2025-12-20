@@ -11,7 +11,7 @@ export default function DashboardPage() {
         <DashboardLayout>
             <div className="max-w-4xl mx-auto">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-deep-slate-blue">Dashboard</h1>
+                    <h1 className="text-3xl font-bold text-black">Dashboard</h1>
                     <p className="text-slate-500">Welcome back, Driver.</p>
                 </div>
 
@@ -32,17 +32,17 @@ export default function DashboardPage() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
                                 <h3 className="text-slate-500 text-sm font-medium mb-2">Total Earnings</h3>
-                                <p className="text-3xl font-bold text-deep-slate-blue">৳12,500</p>
+                                <p className="text-3xl font-bold text-black">৳12,500</p>
                             </div>
                             <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
                                 <h3 className="text-slate-500 text-sm font-medium mb-2">Active Bookings</h3>
-                                <p className="text-3xl font-bold text-electric-teal">3</p>
+                                <p className="text-3xl font-bold text-black">3</p>
                             </div>
                             <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
                                 <h3 className="text-slate-500 text-sm font-medium mb-2">Rating</h3>
                                 <div className="flex items-center gap-1">
-                                    <p className="text-3xl font-bold text-deep-slate-blue">4.9</p>
-                                    <CheckCircle className="h-5 w-5 text-electric-teal" />
+                                    <p className="text-3xl font-bold text-black">4.9</p>
+                                    <CheckCircle className="h-5 w-5 text-black" />
                                 </div>
                             </div>
                         </div>

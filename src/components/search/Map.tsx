@@ -106,7 +106,7 @@ export default function Map({ cars, hoveredCarId, initialCenter }: MapProps) {
             {/* Near Me Button */}
             <button
                 onClick={handleNearMe}
-                className="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-slate-50 transition-colors z-10 text-deep-slate-blue"
+                className="absolute top-4 right-4 bg-white p-3 rounded-full shadow-lg hover:bg-slate-50 transition-colors z-10 text-black"
                 title="Show cars near me"
             >
                 <Navigation className="h-5 w-5" />

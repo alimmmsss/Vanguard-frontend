@@ -29,7 +29,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {/* Sidebar */}
             <aside className="w-64 bg-white border-r border-slate-100 hidden md:flex flex-col fixed h-full">
                 <div className="p-6">
-                    <h1 className="text-2xl font-bold text-deep-slate-blue">Vanguard</h1>
+                    <h1 className="text-2xl font-bold text-black">Vanguard</h1>
                     <p className="text-xs text-slate-400 mt-1">Driver Partner</p>
                 </div>
 
@@ -41,11 +41,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                 key={item.href}
                                 href={item.href}
                                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${isActive
-                                        ? 'bg-electric-teal/10 text-deep-slate-blue font-bold'
+                                        ? 'bg-black/10 text-black font-bold'
                                         : 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'
                                     }`}
                             >
-                                <item.icon className={`h-5 w-5 ${isActive ? 'text-electric-teal' : ''}`} />
+                                <item.icon className={`h-5 w-5 ${isActive ? 'text-black' : ''}`} />
                                 {item.name}
                             </Link>
                         );

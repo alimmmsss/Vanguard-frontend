@@ -9,10 +9,10 @@ const BrandStory = () => {
 
                     {/* Image Side */}
                     <div className="w-full lg:w-1/2 relative">
-                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-electric-teal/10 rounded-full blur-3xl" />
-                        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-deep-slate-blue/10 rounded-full blur-3xl" />
+                        <div className="absolute -top-10 -left-10 w-40 h-40 bg-black/10 rounded-full blur-3xl" />
+                        <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-black/10 rounded-full blur-3xl" />
 
-                        <div className="relative h-[400px] lg:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl shadow-deep-slate-blue/10">
+                        <div className="relative h-[400px] lg:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl shadow-black/10">
                             {/* Ideally we use the generated image here. For now using a placeholder or the generated artifact path if available. 
                                 Since I can't know the exact path until generation, I'll assume it's moved to public or use a generic one if needed.
                                 For now, I'll use a placeholder and expect the user to replace or I'll inject the path if I knew it. 

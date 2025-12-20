@@ -124,7 +124,7 @@ export default function GooglePlacesAutocomplete({ onSelect, placeholder = "Wher
                     value={inputValue}
                     onChange={handleInputChange}
                     placeholder={placeholder}
-                    className={`w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-electric-teal focus:border-transparent outline-none transition-all text-slate-700 placeholder-slate-400 ${className}`}
+                    className={`w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none transition-all text-slate-700 placeholder-slate-400 ${className}`}
                 />
             </div>
 

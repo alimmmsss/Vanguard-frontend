@@ -24,7 +24,7 @@ export default function VerificationQueue() {
     return (
         <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden">
             <div className="p-6 border-b border-slate-100">
-                <h2 className="text-xl font-bold text-deep-slate-blue">Verification Queue</h2>
+                <h2 className="text-xl font-bold text-black">Verification Queue</h2>
                 <p className="text-slate-500 text-sm">Review pending driver applications.</p>
             </div>
 
@@ -50,7 +50,7 @@ export default function VerificationQueue() {
                         <tbody className="divide-y divide-slate-100">
                             {drivers.map((driver) => (
                                 <tr key={driver.id} className="hover:bg-slate-50 transition-colors">
-                                    <td className="px-6 py-4 font-medium text-deep-slate-blue">{driver.name}</td>
+                                    <td className="px-6 py-4 font-medium text-black">{driver.name}</td>
                                     <td className="px-6 py-4 text-slate-500">{driver.appliedDate}</td>
                                     <td className="px-6 py-4">
                                         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-700">
@@ -61,7 +61,7 @@ export default function VerificationQueue() {
                                     <td className="px-6 py-4 text-right">
                                         <button
                                             onClick={() => setSelectedDriver(driver)}
-                                            className="text-electric-teal hover:text-teal-700 font-bold text-sm inline-flex items-center gap-1"
+                                            className="text-black hover:text-teal-700 font-bold text-sm inline-flex items-center gap-1"
                                         >
                                             <Eye className="h-4 w-4" />
                                             Review

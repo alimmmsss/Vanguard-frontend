@@ -32,7 +32,7 @@ export default function ContactCTA({ phone, carName, driverId, driverName, onMes
 
     return (
         <div className="bg-white rounded-xl border border-slate-100 p-6 shadow-sm space-y-4">
-            <h3 className="font-bold text-deep-slate-blue text-lg">Contact Driver</h3>
+            <h3 className="font-bold text-black text-lg">Contact Driver</h3>
             <p className="text-sm text-slate-500">
                 Negotiate directly. No middleman fees.
             </p>
@@ -42,7 +42,7 @@ export default function ContactCTA({ phone, carName, driverId, driverName, onMes
                 <button
                     onClick={onMessageDriver}
                     type="button"
-                    className="w-full py-3 bg-electric-teal hover:bg-teal-600 text-white rounded-xl font-bold shadow-lg shadow-electric-teal/20 transition-all flex items-center justify-center gap-2"
+                    className="w-full py-3 bg-black hover:bg-gray-800 text-white rounded-xl font-bold shadow-lg shadow-black/20 transition-all flex items-center justify-center gap-2"
                 >
                     <MessageSquare className="h-5 w-5" />
                     Message Driver
