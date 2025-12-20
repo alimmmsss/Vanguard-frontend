@@ -53,8 +53,8 @@ export default function SearchResults() {
             <div className={`w-full lg:w-1/2 h-full overflow-y-auto bg-slate-50 p-4 lg:p-6 ${showMapMobile ? 'hidden lg:block' : 'block'}`}>
                 <div className="max-w-2xl mx-auto">
                     <div className="mb-6">
-                        <h1 className="text-2xl font-bold text-deep-slate-blue">
-                            Available Cars in <span className="text-electric-teal">{address.split(',')[0]}</span>
+                        <h1 className="text-2xl font-bold text-black">
+                            Available Cars in <span className="text-black">{address.split(',')[0]}</span>
                         </h1>
                         <p className="text-slate-500 text-sm mt-1">
                             {cars.length} vehicles found • No commission
@@ -69,7 +69,7 @@ export default function SearchResults() {
 
                     {loading ? (
                         <div className="flex justify-center py-20">
-                            <Loader2 className="h-8 w-8 animate-spin text-electric-teal" />
+                            <Loader2 className="h-8 w-8 animate-spin text-black" />
                         </div>
                     ) : (
                         <div className="space-y-4 pb-20 lg:pb-0">
@@ -98,7 +98,7 @@ export default function SearchResults() {
             <div className="lg:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40">
                 <button
                     onClick={() => setShowMapMobile(!showMapMobile)}
-                    className="bg-deep-slate-blue text-white px-6 py-3 rounded-full shadow-lg font-bold flex items-center gap-2 hover:bg-slate-800 transition-all"
+                    className="bg-black text-white px-6 py-3 rounded-full shadow-lg font-bold flex items-center gap-2 hover:bg-slate-800 transition-all"
                 >
                     {showMapMobile ? (
                         <>
