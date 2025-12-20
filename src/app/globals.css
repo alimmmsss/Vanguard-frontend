@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-deep-slate-blue: #1e293b;
-  --color-electric-teal: #14b8a6;
+  --color-deep-slate-blue: #000000;
+  --color-electric-teal: #000000;
 }
 
 :root {
