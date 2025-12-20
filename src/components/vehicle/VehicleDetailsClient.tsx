@@ -43,7 +43,7 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
                                 <div className="flex justify-between items-start mb-4">
                                     <div>
                                         <div className="flex items-center gap-2 mb-2">
-                                            <span className="bg-electric-teal/10 text-electric-teal text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wider">
+                                            <span className="bg-black/10 text-black text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wider">
                                                 {car.type}
                                             </span>
                                             <div className="flex items-center gap-1 text-orange-400">
@@ -52,7 +52,7 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
                                                 <span className="text-slate-400 text-xs">({car.trips} trips)</span>
                                             </div>
                                         </div>
-                                        <h1 className="text-3xl font-bold text-deep-slate-blue mb-2">{car.name}</h1>
+                                        <h1 className="text-3xl font-bold text-black mb-2">{car.name}</h1>
                                         <div className="flex items-center gap-2 text-slate-500">
                                             <MapPin className="h-4 w-4" />
                                             {car.location.address}
@@ -60,22 +60,22 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
                                     </div>
                                     <div className="text-right hidden sm:block">
                                         <p className="text-sm text-slate-400">Daily Rate</p>
-                                        <p className="text-3xl font-bold text-deep-slate-blue">৳{car.price.toLocaleString()}</p>
+                                        <p className="text-3xl font-bold text-black">৳{car.price.toLocaleString()}</p>
                                     </div>
                                 </div>
 
                                 <div className="border-t border-slate-100 my-6" />
 
-                                <h2 className="text-xl font-bold text-deep-slate-blue mb-4">Description</h2>
+                                <h2 className="text-xl font-bold text-black mb-4">Description</h2>
                                 <p className="text-slate-600 leading-relaxed mb-8">
                                     {car.description}
                                 </p>
 
-                                <h2 className="text-xl font-bold text-deep-slate-blue mb-4">Features</h2>
+                                <h2 className="text-xl font-bold text-black mb-4">Features</h2>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                                     {car.features.map((feature, idx) => (
                                         <div key={idx} className="flex items-center gap-2 text-slate-600">
-                                            <CheckCircle2 className="h-5 w-5 text-electric-teal flex-shrink-0" />
+                                            <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0" />
                                             <span className="text-sm font-medium">{feature}</span>
                                         </div>
                                     ))}
@@ -84,16 +84,16 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
 
                             {/* Driver Info */}
                             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
-                                <h2 className="text-xl font-bold text-deep-slate-blue mb-6">Meet the Driver</h2>
+                                <h2 className="text-xl font-bold text-black mb-6">Meet the Driver</h2>
                                 <div className="flex items-center gap-4">
                                     <div className="h-16 w-16 rounded-full bg-slate-100 flex items-center justify-center text-2xl font-bold text-slate-400">
                                         {car.driver.name.charAt(0)}
                                     </div>
                                     <div>
                                         <div className="flex items-center gap-2">
-                                            <h3 className="text-lg font-bold text-deep-slate-blue">{car.driver.name}</h3>
+                                            <h3 className="text-lg font-bold text-black">{car.driver.name}</h3>
                                             {car.driver.verified && (
-                                                <ShieldCheck className="h-5 w-5 text-electric-teal" aria-label="Verified Driver" />
+                                                <ShieldCheck className="h-5 w-5 text-black" aria-label="Verified Driver" />
                                             )}
                                         </div>
                                         <p className="text-slate-500 text-sm">Joined {car.driver.joined} • Response rate: {car.driver.responseRate}</p>
@@ -126,7 +126,7 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
                 <div className="flex items-center justify-between gap-4">
                     <div>
                         <p className="text-xs text-slate-400">Daily Rate</p>
-                        <p className="text-2xl font-bold text-deep-slate-blue">৳{car.price.toLocaleString()}</p>
+                        <p className="text-2xl font-bold text-black">৳{car.price.toLocaleString()}</p>
                     </div>
                     <div className="flex-1 max-w-[200px]">
                         <ContactCTA

@@ -39,25 +39,25 @@ export default function SearchWidget() {
                 <button
                     onClick={() => setActiveTab('daily')}
                     className={`pb-2 text-sm font-semibold transition-all relative ${activeTab === 'daily'
-                        ? 'text-deep-slate-blue'
+                        ? 'text-black'
                         : 'text-slate-400 hover:text-slate-600'
                         }`}
                 >
                     Daily Rental
                     {activeTab === 'daily' && (
-                        <span className="absolute bottom-[-17px] left-0 w-full h-1 bg-electric-teal rounded-t-full" />
+                        <span className="absolute bottom-[-17px] left-0 w-full h-1 bg-black rounded-t-full" />
                     )}
                 </button>
                 <button
                     onClick={() => setActiveTab('outstation')}
                     className={`pb-2 text-sm font-semibold transition-all relative ${activeTab === 'outstation'
-                        ? 'text-deep-slate-blue'
+                        ? 'text-black'
                         : 'text-slate-400 hover:text-slate-600'
                         }`}
                 >
                     Long Distance
                     {activeTab === 'outstation' && (
-                        <span className="absolute bottom-[-17px] left-0 w-full h-1 bg-electric-teal rounded-t-full" />
+                        <span className="absolute bottom-[-17px] left-0 w-full h-1 bg-black rounded-t-full" />
                     )}
                 </button>
             </div>
@@ -83,7 +83,7 @@ export default function SearchWidget() {
                             type="date"
                             value={startDate}
                             onChange={(e) => setStartDate(e.target.value)}
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-electric-teal focus:border-transparent outline-none text-slate-700"
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none text-slate-700"
                         />
                     </div>
                 </div>
@@ -96,7 +96,7 @@ export default function SearchWidget() {
                             type="date"
                             value={endDate}
                             onChange={(e) => setEndDate(e.target.value)}
-                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-electric-teal focus:border-transparent outline-none text-slate-700"
+                            className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none text-slate-700"
                         />
                     </div>
                 </div>
@@ -111,7 +111,7 @@ export default function SearchWidget() {
                     <button
                         type="button"
                         onClick={handleSearch}
-                        className="w-full py-3 bg-deep-slate-blue hover:bg-slate-800 text-white rounded-xl font-bold shadow-lg shadow-deep-slate-blue/30 transition-all flex items-center justify-center gap-2"
+                        className="w-full py-3 bg-black hover:bg-slate-800 text-white rounded-xl font-bold shadow-lg shadow-deep-slate-blue/30 transition-all flex items-center justify-center gap-2"
                     >
                         <Search className="h-5 w-5" />
                         Search
@@ -126,7 +126,7 @@ export default function SearchWidget() {
                         key={type}
                         onClick={() => setVehicleType(type.toLowerCase())}
                         className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all flex items-center gap-2 ${vehicleType === type.toLowerCase()
-                            ? 'bg-electric-teal/10 border-electric-teal text-deep-slate-blue'
+                            ? 'bg-black/10 border-black text-black'
                             : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300'
                             }`}
                     >

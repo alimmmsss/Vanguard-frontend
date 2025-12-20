@@ -56,15 +56,15 @@ const Footer = () => {
                         <h3 className="text-lg font-bold mb-6">Contact Us</h3>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-slate-400">
-                                <MapPin className="h-5 w-5 text-electric-teal flex-shrink-0 mt-0.5" />
+                                <MapPin className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                                 <span>Level 4, Gulshan 1, Dhaka, Bangladesh</span>
                             </li>
                             <li className="flex items-center gap-3 text-slate-400">
-                                <Phone className="h-5 w-5 text-electric-teal flex-shrink-0" />
+                                <Phone className="h-5 w-5 text-white flex-shrink-0" />
                                 <span>+880 1712 345 678</span>
                             </li>
                             <li className="flex items-center gap-3 text-slate-400">
-                                <Mail className="h-5 w-5 text-electric-teal flex-shrink-0" />
+                                <Mail className="h-5 w-5 text-white flex-shrink-0" />
                                 <span>support@vanguard.com</span>
                             </li>
                         </ul>
