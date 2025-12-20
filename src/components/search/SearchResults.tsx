@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import CarCard from './CarCard';
 import Map from './Map';
 import { MOCK_CARS } from '@/lib/mockData';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Map as MapIcon, List } from 'lucide-react';
 
 export default function SearchResults() {
     const searchParams = useSearchParams();
@@ -13,6 +13,7 @@ export default function SearchResults() {
     const [cars, setCars] = useState<typeof MOCK_CARS>([]);
     const [error, setError] = useState<string | null>(null);
     const [hoveredCarId, setHoveredCarId] = useState<string | null>(null);
+    const [showMapMobile, setShowMapMobile] = useState(false);
 
     // Parse params
     const lat = parseFloat(searchParams.get('lat') || '23.8103');
@@ -49,7 +50,7 @@ export default function SearchResults() {
     return (
         <div className="flex flex-col lg:flex-row h-[calc(100vh-64px)]">
             {/* List View */}
-            <div className="w-full lg:w-1/2 h-full overflow-y-auto bg-slate-50 p-4 lg:p-6">
+            <div className={`w-full lg:w-1/2 h-full overflow-y-auto bg-slate-50 p-4 lg:p-6 ${showMapMobile ? 'hidden lg:block' : 'block'}`}>
                 <div className="max-w-2xl mx-auto">
                     <div className="mb-6">
                         <h1 className="text-2xl font-bold text-deep-slate-blue">
@@ -71,7 +72,7 @@ export default function SearchResults() {
                             <Loader2 className="h-8 w-8 animate-spin text-electric-teal" />
                         </div>
                     ) : (
-                        <div className="space-y-4">
+                        <div className="space-y-4 pb-20 lg:pb-0">
                             {cars.map((car) => (
                                 <CarCard
                                     key={car.id}
@@ -85,12 +86,30 @@ export default function SearchResults() {
             </div>
 
             {/* Map View */}
-            <div className="hidden lg:block w-1/2 h-full sticky top-16">
+            <div className={`w-full lg:w-1/2 h-full sticky top-16 ${showMapMobile ? 'block' : 'hidden lg:block'}`}>
                 <Map
                     cars={cars}
                     hoveredCarId={hoveredCarId}
                     initialCenter={{ lat, lng }}
                 />
+            </div>
+
+            {/* Mobile Toggle Button */}
+            <div className="lg:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40">
+                <button
+                    onClick={() => setShowMapMobile(!showMapMobile)}
+                    className="bg-deep-slate-blue text-white px-6 py-3 rounded-full shadow-lg font-bold flex items-center gap-2 hover:bg-slate-800 transition-all"
+                >
+                    {showMapMobile ? (
+                        <>
+                            <List className="h-5 w-5" /> Show List
+                        </>
+                    ) : (
+                        <>
+                            <MapIcon className="h-5 w-5" /> Show Map
+                        </>
+                    )}
+                </button>
             </div>
         </div>
     );

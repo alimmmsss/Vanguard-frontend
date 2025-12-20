@@ -1,5 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
+import BrandStory from "@/components/home/BrandStory";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -9,24 +11,30 @@ export default function Home() {
 
       {/* Value Proposition Section (Placeholder for now) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-deep-slate-blue">Why Choose Vanguard?</h2>
-          <p className="mt-4 text-slate-600">The smartest way to rent a car in Bangladesh.</p>
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-black mt-3 mb-6">Built for you.</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            { title: "Zero Commission", desc: "We don't charge any fees. You pay the driver directly." },
-            { title: "Direct Contact", desc: "Chat with drivers via WhatsApp to negotiate and book." },
-            { title: "Verified Drivers", desc: "All drivers are verified with NID and License checks." },
+            { title: "Zero Commission", desc: "No fees. Drivers earn more, you pay less." },
+            { title: "Direct Choice", desc: "Choose your driver, choose your car. Full control." },
+            { title: "Safety First", desc: "Verified drivers and community reviews." },
           ].map((item, i) => (
-            <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-bold text-deep-slate-blue mb-3">{item.title}</h3>
-              <p className="text-slate-600">{item.desc}</p>
+            <div key={i} className="bg-gray-50 p-8 rounded-lg hover:bg-gray-100 transition-colors">
+              <div className="w-10 h-10 mb-4 text-black">
+                {/* Icons */}
+                <div className="h-8 w-8 rounded-full border-2 border-black" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
+              <p className="text-gray-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
-    </main>
+
+      <BrandStory />
+      <Footer />
+    </main >
   );
 }

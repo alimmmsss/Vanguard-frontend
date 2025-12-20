@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { useGoogleMaps } from '@/components/providers/GoogleMapsProvider';
 import { Car } from '@/lib/mockData';
 import { Navigation } from 'lucide-react';
 
@@ -25,7 +26,7 @@ interface MapProps {
 
 export default function Map({ cars, hoveredCarId, initialCenter }: MapProps) {
     // Removed local useJsApiLoader to use global provider
-    const isLoaded = true;
+    const { isLoaded } = useGoogleMaps();
 
     const [map, setMap] = useState<google.maps.Map | null>(null);
     const [center, setCenter] = useState(initialCenter || defaultCenter);

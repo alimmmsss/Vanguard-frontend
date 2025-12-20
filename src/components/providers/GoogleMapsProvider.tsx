@@ -1,9 +1,21 @@
 'use client';
 
 import { useJsApiLoader } from '@react-google-maps/api';
-import { ReactNode } from 'react';
+import { ReactNode, createContext, useContext } from 'react';
 
 const LIBRARIES: ("places")[] = ["places"];
+
+interface GoogleMapsContextType {
+    isLoaded: boolean;
+    loadError: Error | undefined;
+}
+
+const GoogleMapsContext = createContext<GoogleMapsContextType>({
+    isLoaded: false,
+    loadError: undefined,
+});
+
+export const useGoogleMaps = () => useContext(GoogleMapsContext);
 
 export default function GoogleMapsProvider({ children }: { children: ReactNode }) {
     const { isLoaded, loadError } = useJsApiLoader({
@@ -12,13 +24,9 @@ export default function GoogleMapsProvider({ children }: { children: ReactNode }
         libraries: LIBRARIES,
     });
 
-    if (loadError) {
-        return <div>Error loading Google Maps</div>;
-    }
-
-    if (!isLoaded) {
-        return <div className="h-screen w-full flex items-center justify-center bg-slate-50">Loading Maps...</div>;
-    }
-
-    return <>{children}</>;
+    return (
+        <GoogleMapsContext.Provider value={{ isLoaded, loadError }}>
+            {children}
+        </GoogleMapsContext.Provider>
+    );
 }

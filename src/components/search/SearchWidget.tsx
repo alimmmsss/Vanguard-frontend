@@ -63,7 +63,7 @@ export default function SearchWidget() {
             </div>
 
             {/* Inputs Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-4 items-end">
 
                 {/* Location */}
                 <div className="md:col-span-4 space-y-1.5">

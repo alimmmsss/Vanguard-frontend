@@ -8,13 +8,27 @@ interface ContactCTAProps {
     driverId?: string;
     driverName?: string;
     onMessageDriver?: () => void;
+    condensed?: boolean;
 }
 
-export default function ContactCTA({ phone, carName, driverId, driverName, onMessageDriver }: ContactCTAProps) {
+export default function ContactCTA({ phone, carName, driverId, driverName, onMessageDriver, condensed = false }: ContactCTAProps) {
     const handleWhatsApp = () => {
         const message = encodeURIComponent(`Hi, is your ${carName} available? I found it on Vanguard.`);
         window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
     };
+
+    if (condensed) {
+        return (
+            <button
+                onClick={handleWhatsApp}
+                type="button"
+                className="w-full py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl font-bold shadow-lg shadow-green-500/20 transition-all flex items-center justify-center gap-2 text-sm"
+            >
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp
+            </button>
+        );
+    }
 
     return (
         <div className="bg-white rounded-xl border border-slate-100 p-6 shadow-sm space-y-4">

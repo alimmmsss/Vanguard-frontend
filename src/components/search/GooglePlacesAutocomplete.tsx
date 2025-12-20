@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useJsApiLoader } from '@react-google-maps/api';
+import { useGoogleMaps } from '@/components/providers/GoogleMapsProvider';
 import { MapPin, Loader2 } from 'lucide-react';
 
 const LIBRARIES: ("places")[] = ["places"];
@@ -21,7 +22,7 @@ interface GooglePlacesAutocompleteProps {
 
 export default function GooglePlacesAutocomplete({ onSelect, placeholder = "Where to?", className }: GooglePlacesAutocompleteProps) {
     // Removed local useJsApiLoader to use global provider
-    const isLoaded = true; // Assumed loaded by provider
+    const { isLoaded } = useGoogleMaps(); // Assumed loaded by provider
 
     const [mounted, setMounted] = useState(false);
     const [inputValue, setInputValue] = useState('');

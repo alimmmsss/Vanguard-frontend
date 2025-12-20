@@ -47,7 +47,8 @@ export default function LoginForm() {
             // MOCK API CALL
             // In real app: const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, ...);
 
-            await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate delay
+            // Mock API call simulation removed for speed
+
 
             // Mock Success
             const mockUser = {
@@ -92,8 +93,8 @@ export default function LoginForm() {
                     type="button"
                     onClick={() => setValue('role', 'passenger')}
                     className={`flex-1 py-2 text-sm font-bold rounded-lg transition-all ${role === 'passenger'
-                            ? 'bg-white text-deep-slate-blue shadow-sm'
-                            : 'text-slate-500 hover:text-slate-700'
+                        ? 'bg-white text-deep-slate-blue shadow-sm'
+                        : 'text-slate-500 hover:text-slate-700'
                         }`}
                 >
                     Passenger
@@ -102,8 +103,8 @@ export default function LoginForm() {
                     type="button"
                     onClick={() => setValue('role', 'driver')}
                     className={`flex-1 py-2 text-sm font-bold rounded-lg transition-all ${role === 'driver'
-                            ? 'bg-white text-deep-slate-blue shadow-sm'
-                            : 'text-slate-500 hover:text-slate-700'
+                        ? 'bg-white text-deep-slate-blue shadow-sm'
+                        : 'text-slate-500 hover:text-slate-700'
                         }`}
                 >
                     Driver

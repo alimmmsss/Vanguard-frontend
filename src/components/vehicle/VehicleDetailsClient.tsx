@@ -31,17 +31,14 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
 
     return (
         <>
-            <main className="min-h-screen bg-slate-50 pb-20">
-                <Navbar />
-
+            <Navbar />
+            <main className="min-h-screen pt-20 pb-32 lg:pb-10 bg-slate-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <div className="grid lg:grid-cols-3 gap-8">
-
                         {/* LEFT COLUMN (Gallery & Info) */}
                         <div className="lg:col-span-2 space-y-8">
                             <ImageGallery images={car.images} />
 
-                            {/* Header Info */}
                             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
                                 <div className="flex justify-between items-start mb-4">
                                     <div>
@@ -106,14 +103,8 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
                         </div>
 
                         {/* RIGHT COLUMN (Sticky Sidebar) */}
-                        <div className="lg:col-span-1">
+                        <div className="lg:col-span-1 hidden lg:block">
                             <div className="sticky top-24 space-y-6">
-                                {/* Mobile Price (Visible only on mobile) */}
-                                <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm sm:hidden">
-                                    <p className="text-sm text-slate-400">Daily Rate</p>
-                                    <p className="text-3xl font-bold text-deep-slate-blue">৳{car.price.toLocaleString()}</p>
-                                </div>
-
                                 <AvailabilityCalendar unavailableDates={car.unavailableDates} />
 
                                 <ContactCTA
@@ -130,9 +121,29 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
                 </div>
             </main>
 
+            {/* Mobile Bottom Bar */}
+            <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-slate-100 p-4 z-40 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
+                <div className="flex items-center justify-between gap-4">
+                    <div>
+                        <p className="text-xs text-slate-400">Daily Rate</p>
+                        <p className="text-2xl font-bold text-deep-slate-blue">৳{car.price.toLocaleString()}</p>
+                    </div>
+                    <div className="flex-1 max-w-[200px]">
+                        <ContactCTA
+                            phone={car.driver.phone}
+                            carName={car.name}
+                            driverId={car.id}
+                            driverName={car.driver.name}
+                            onMessageDriver={handleOpenChat}
+                            condensed
+                        />
+                    </div>
+                </div>
+            </div>
+
             {/* Chat Widget */}
             <ChatWidget
-                userId="current-user-id" // Replace with actual user ID from auth
+                userId="current-user-id"
                 initialDriverId={chatDriverId}
                 initialDriverName={chatDriverName}
             />

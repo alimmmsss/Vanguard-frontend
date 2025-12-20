@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
 import AuthProvider from "@/components/auth/AuthProvider";
-import GoogleMapsLoader from "@/components/common/GoogleMapsLoader";
+import GoogleMapsProvider from "@/components/providers/GoogleMapsProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vanguard - Direct Car Rental",
-  description: "Zero-commission marketplace for car rentals.",
+  title: "Vanguard - Premier Car Rental",
+  description: "Experience luxury direct car rental with zero commissions.",
 };
 
 export default function RootLayout({
@@ -32,9 +32,9 @@ export default function RootLayout({
       >
         <StoreProvider>
           <AuthProvider>
-            <GoogleMapsLoader>
+            <GoogleMapsProvider>
               {children}
-            </GoogleMapsLoader>
+            </GoogleMapsProvider>
           </AuthProvider>
         </StoreProvider>
       </body>

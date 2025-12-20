@@ -1,24 +1,20 @@
+
 import SearchWidget from '../search/SearchWidget';
 
 const Hero = () => {
     return (
-        <div className="relative bg-slate-50 pb-32">
+        <div className="relative bg-white pb-16 lg:pb-24">
             {/* Background / Hero Content */}
-            <div className="bg-deep-slate-blue pt-20 pb-40 lg:pt-32 lg:pb-48 overflow-hidden relative">
-                {/* Abstract Background Shapes */}
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
-                    <div className="absolute -top-[50%] -left-[10%] w-[70%] h-[150%] bg-electric-teal rounded-full blur-[120px]" />
-                    <div className="absolute top-[20%] -right-[10%] w-[50%] h-[100%] bg-purple-500 rounded-full blur-[120px]" />
-                </div>
+            <div className="flex flex-col items-center justify-center pt-20 pb-12 lg:pt-32 lg:pb-20 bg-black text-white relative overflow-hidden">
+                {/* Optional Subtle Background Image of a dark city street, obscured */}
+                {/* <div className="absolute inset-0 bg-[url('/some-city-pattern.png')] opacity-20" /> */}
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
-                        Direct Car Rental. <br className="hidden md:block" />
-                        <span className="text-electric-teal">Zero Commission.</span>
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+                        Go anywhere with Vanguard.
                     </h1>
-                    <p className="mt-4 text-xl text-slate-300 max-w-2xl mx-auto mb-10">
-                        Connect directly with verified drivers. No middleman fees.
-                        Transparent pricing and instant communication via WhatsApp.
+                    <p className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+                        Request a ride, hop in, and go. direct connection to drivers.
                     </p>
                 </div>
             </div>
