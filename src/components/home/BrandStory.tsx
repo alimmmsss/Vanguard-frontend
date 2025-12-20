@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const BrandStory = () => {
     return (
-        <section className="py-20 bg-white overflow-hidden">
+        <section className="py-12 sm:py-16 lg:py-20 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
@@ -30,12 +30,12 @@ const BrandStory = () => {
                     {/* Content Side */}
                     <div className="w-full lg:w-1/2 space-y-8">
                         <div>
-                            <h2 className="text-3xl lg:text-5xl font-bold text-black leading-tight">
+                            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-black leading-tight">
                                 Do more than just drive.
                             </h2>
                         </div>
 
-                        <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        <div className="space-y-4 sm:space-y-6 text-gray-600 text-base sm:text-lg leading-relaxed">
                             <p>
                                 Vanguard is built on a simple mission: Create a direct, fair marketplace for mobility.
                                 No hidden fees. No commissions. Just drivers and passengers.
@@ -45,7 +45,7 @@ const BrandStory = () => {
                         <div className="pt-4">
                             <Link
                                 href="/signup"
-                                className="inline-flex items-center justify-center px-8 py-3 text-lg font-bold text-white transition-all bg-black rounded-lg hover:bg-gray-800"
+                                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 text-base sm:text-lg font-bold text-white transition-all bg-black rounded-lg hover:bg-gray-800"
                             >
                                 Get Started
                             </Link>

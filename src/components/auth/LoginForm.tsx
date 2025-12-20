@@ -81,14 +81,14 @@ export default function LoginForm() {
     };
 
     return (
-        <div className="w-full max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
-            <div className="text-center mb-8">
+        <div className="w-full max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-slate-100 p-5 sm:p-8">
+            <div className="text-center mb-6 sm:mb-8">
                 <h1 className="text-2xl font-bold text-black">Welcome Back</h1>
                 <p className="text-slate-500 mt-2">Log in to your account</p>
             </div>
 
             {/* Role Toggle */}
-            <div className="flex bg-slate-100 p-1 rounded-xl mb-8">
+            <div className="flex bg-slate-100 p-1 rounded-xl mb-6 sm:mb-8">
                 <button
                     type="button"
                     onClick={() => setValue('role', 'passenger')}

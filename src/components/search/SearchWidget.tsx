@@ -33,9 +33,9 @@ export default function SearchWidget() {
     };
 
     return (
-        <div className="bg-white rounded-2xl shadow-2xl shadow-slate-200/50 p-6 w-full max-w-4xl mx-auto -mt-24 relative z-20 border border-slate-100">
+        <div className="bg-white rounded-2xl shadow-2xl shadow-slate-200/50 p-4 sm:p-6 w-full max-w-4xl mx-auto -mt-24 relative z-20 border border-slate-100">
             {/* Tabs */}
-            <div className="flex gap-6 mb-6 border-b border-slate-100 pb-4">
+            <div className="flex gap-4 sm:gap-6 mb-4 sm:mb-6 border-b border-slate-100 pb-3 sm:pb-4">
                 <button
                     onClick={() => setActiveTab('daily')}
                     className={`pb-2 text-sm font-semibold transition-all relative ${activeTab === 'daily'
@@ -120,12 +120,12 @@ export default function SearchWidget() {
             </div>
 
             {/* Vehicle Type Selector (Optional row below or integrated) */}
-            <div className="mt-4 flex gap-4 overflow-x-auto pb-2">
+            <div className="mt-3 sm:mt-4 flex gap-2 sm:gap-4 overflow-x-auto pb-2">
                 {['Sedan', 'SUV', 'Microbus', 'Luxury'].map((type) => (
                     <button
                         key={type}
                         onClick={() => setVehicleType(type.toLowerCase())}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all flex items-center gap-2 ${vehicleType === type.toLowerCase()
+                        className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium border transition-all flex items-center gap-1 sm:gap-2 flex-shrink-0 ${vehicleType === type.toLowerCase()
                             ? 'bg-black/10 border-black text-black'
                             : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300'
                             }`}

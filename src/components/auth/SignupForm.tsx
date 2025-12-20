@@ -76,8 +76,8 @@ export default function SignupForm({ role = 'passenger' }: SignupFormProps) {
     };
 
     return (
-        <div className="w-full max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
-            <div className="text-center mb-8">
+        <div className="w-full max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-slate-100 p-5 sm:p-8">
+            <div className="text-center mb-6 sm:mb-8">
                 <h1 className="text-2xl font-bold text-black">
                     {role === 'driver' ? 'Join as Driver' : 'Create Account'}
                 </h1>

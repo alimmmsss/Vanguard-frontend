@@ -13,7 +13,7 @@ const Hero = () => {
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
                         Go anywhere with Vanguard.
                     </h1>
-                    <p className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+                    <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 sm:mb-10 px-2">
                         Request a ride, hop in, and go. direct connection to drivers.
                     </p>
                 </div>

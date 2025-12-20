@@ -30,10 +30,10 @@ export default function CarCard({ car, onHover }: CarCardProps) {
                 </div>
 
                 {/* Content */}
-                <div className="p-4 flex flex-col justify-between flex-grow">
+                <div className="p-3 sm:p-4 flex flex-col justify-between flex-grow">
                     <div>
                         <div className="flex justify-between items-start mb-2">
-                            <h3 className="text-lg font-bold text-black">{car.name}</h3>
+                            <h3 className="text-base sm:text-lg font-bold text-black">{car.name}</h3>
                             <div className="flex items-center gap-1 bg-slate-50 px-2 py-1 rounded-full">
                                 <Star className="h-3 w-3 text-orange-400 fill-orange-400" />
                                 <span className="text-xs font-bold text-slate-700">{car.rating}</span>
@@ -60,14 +60,14 @@ export default function CarCard({ car, onHover }: CarCardProps) {
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
                         <div>
                             <p className="text-xs text-slate-400">Daily Rate</p>
-                            <p className="text-xl font-bold text-black">
+                            <p className="text-lg sm:text-xl font-bold text-black">
                                 ৳{car.price.toLocaleString()}
                             </p>
                         </div>
 
                         <Link
                             href={`/vehicles/${car.id}`}
-                            className="bg-black text-white px-6 py-2 rounded-lg font-medium hover:bg-slate-800 transition-colors shadow-lg shadow-black/10"
+                            className="bg-black text-white px-4 sm:px-6 py-2 rounded-lg text-sm sm:text-base font-medium hover:bg-slate-800 transition-colors shadow-lg shadow-black/10"
                         >
                             View Details
                         </Link>

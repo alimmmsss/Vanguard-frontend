@@ -33,10 +33,10 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
         <>
             <Navbar />
             <main className="min-h-screen pt-20 pb-32 lg:pb-10 bg-slate-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
                     <div className="grid lg:grid-cols-3 gap-8">
                         {/* LEFT COLUMN (Gallery & Info) */}
-                        <div className="lg:col-span-2 space-y-8">
+                        <div className="lg:col-span-2 space-y-6 sm:space-y-8">
                             <ImageGallery images={car.images} />
 
                             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
@@ -52,7 +52,7 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
                                                 <span className="text-slate-400 text-xs">({car.trips} trips)</span>
                                             </div>
                                         </div>
-                                        <h1 className="text-3xl font-bold text-black mb-2">{car.name}</h1>
+                                        <h1 className="text-2xl sm:text-3xl font-bold text-black mb-2">{car.name}</h1>
                                         <div className="flex items-center gap-2 text-slate-500">
                                             <MapPin className="h-4 w-4" />
                                             {car.location.address}
@@ -66,12 +66,12 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
 
                                 <div className="border-t border-slate-100 my-6" />
 
-                                <h2 className="text-xl font-bold text-black mb-4">Description</h2>
-                                <p className="text-slate-600 leading-relaxed mb-8">
+                                <h2 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Description</h2>
+                                <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                                     {car.description}
                                 </p>
 
-                                <h2 className="text-xl font-bold text-black mb-4">Features</h2>
+                                <h2 className="text-lg sm:text-xl font-bold text-black mb-3 sm:mb-4">Features</h2>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                                     {car.features.map((feature, idx) => (
                                         <div key={idx} className="flex items-center gap-2 text-slate-600">
@@ -84,9 +84,9 @@ export default function VehicleDetailsClient({ carId }: VehicleDetailsClientProp
 
                             {/* Driver Info */}
                             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100">
-                                <h2 className="text-xl font-bold text-black mb-6">Meet the Driver</h2>
+                                <h2 className="text-lg sm:text-xl font-bold text-black mb-4 sm:mb-6">Meet the Driver</h2>
                                 <div className="flex items-center gap-4">
-                                    <div className="h-16 w-16 rounded-full bg-slate-100 flex items-center justify-center text-2xl font-bold text-slate-400">
+                                    <div className="h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-slate-100 flex items-center justify-center text-xl sm:text-2xl font-bold text-slate-400">
                                         {car.driver.name.charAt(0)}
                                     </div>
                                     <div>
